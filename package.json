@@ -1,0 +1,19 @@
+{
+  "name": "banka",
+  "version": "1.0.0",
+  "description": "Online Banking System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/encodedBicoding/Banka-react.git"
+  },
+  "author": "Dominic Olije <dominic.olije@andela.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/encodedBicoding/Banka-react/issues"
+  },
+  "homepage": "https://github.com/encodedBicoding/Banka-react#readme"
+}
