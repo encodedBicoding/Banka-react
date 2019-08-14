@@ -5,6 +5,9 @@ import { BrowserRouter } from "react-router-dom";
 import "./styles/main.css";
 
 const root = document.getElementById("root");
+if (process.env.NODE_ENV !== "production") {
+  console.log("Looks like we are in development mode!");
+}
 
 render(
   <BrowserRouter>
