@@ -4,8 +4,9 @@
   "description": "Online Banking System",
   "main": "/src/index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode development",
+    "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --open && webpack --watch"
   },
   "repository": {
@@ -30,17 +31,19 @@
     "react-hot-loader": "^4.12.8",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
+    "webpack-merge": "^4.2.1",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "css-loader": "^3.2.0",
+    "express": "^4.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
-    "style-loader": "^1.0.0"
+    "style-loader": "^1.0.0",
   }
 }
