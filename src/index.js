@@ -1,8 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App.js";
+import { render } from "react-dom";
+import App from "./components/App.js";
+import { BrowserRouter } from "react-router-dom";
+import "./styles/main.css";
 
 const root = document.getElementById("root");
-ReactDOM.render(<App />, root);
+
+render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  root
+);
 
 module.hot.accept();

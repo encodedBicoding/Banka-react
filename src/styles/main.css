@@ -1,0 +1,46 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #00003A;
+}
+/* Navigation Styles */
+.home_nav {
+    text-align: center;
+    margin: 30px;
+    border-bottom: 0.2px solid rgba(0,0,0, 0.8);
+   
+}
+
+.home_nav_list:hover,
+#nav_link:hover {
+    cursor: pointer;
+    color: #FF8C00;
+}
+
+#nav_link {
+    text-decoration: none;
+}
+.home_nav_list {
+    list-style-type: none;
+    display: inline;
+    padding: 40px;
+}
+.nav_logo {
+    text-align: center;
+    padding: 30px;
+}
+.nav_last_child {
+    color: #FF8C00;
+    font-weight: 300 !important
+}
+.nav_slogan {
+    font-size: 10px;
+    padding: none;
+    position: absolute;
+    left: 47.3%;
+    top: 85px;
+}
+.nav_title {
+    padding: 11px;
+    font-size: 3.5em;
+    font-weight: 500
+}
