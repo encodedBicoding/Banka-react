@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { Navbar } from "./Navbar";
+import Navbar from "./Navbar";
 
 const Homepage = props => {
   const changeHomeTitle = () => {
