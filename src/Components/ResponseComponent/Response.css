@@ -1,0 +1,35 @@
+.success {
+    position: absolute;
+    border-radius: 3px;
+    padding: 10px;
+    left: -10px;
+    margin-top: 10px;
+    text-align: center;
+    animation: slideout 2s;
+    z-index: 1;
+    background-color: green;
+}
+.error {
+    position: absolute;
+    border-radius: 3px;
+    padding: 10px;
+    left: -10px;
+    margin-top: 10px;
+    text-align: center;
+    animation: slideout 4s;
+    z-index: 1;
+    background-color: darkred;
+}
+
+#active, .active{
+   display: block;
+   color: #fff;
+   font-size: 13px;
+}
+.non-active, #non-active{
+    display: none;
+}
+
+@keyframes slideout {
+    to{left: 150px}
+}

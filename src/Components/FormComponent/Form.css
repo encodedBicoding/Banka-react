@@ -1,0 +1,86 @@
+.modal-content{
+    width: 45%;
+    position: relative;
+    margin: auto;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    transition: .9s ease-in-out;
+}
+.modal-content:active{
+    background-color: #FF8C00
+}
+
+.close {
+    position: relative;
+    top: 0;
+    padding: 0;
+    left: 100%;
+    margin: 0;
+    cursor: pointer;
+    font-size: 30px;
+    transition: .4s;
+    color: #FF8C00;
+    font-weight: bold;
+}
+.inputError{
+    color: red;
+    font-size: 13px;
+}
+.close:hover,
+.close:focus{
+    font-size: 40px;
+    color: orange
+}
+.form-container {
+    width: 100%;
+    position: relative;
+    -webkit-animation: slideup .3s;
+    animation: slideup .3s;
+}
+.form-header{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 20px;
+}
+.input-label{
+    display: block;
+    margin: 3px 0 1px 0;
+}
+.form-content{
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0 10px 0;
+    border: none;
+    box-shadow: 0 0 0 2px rgba(255,255,255,1);
+}
+.btn-submit{
+    background-color: #FF8C00;
+    border: none;
+    margin: 20px 3px 10px 8px;
+    width: inherit;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.disabled {
+    cursor: wait !important;
+    background-color: grey !important;
+}
+.have-account p{
+    font-size: 70%;
+    text-align: center;
+}
+
+/* Key frames */
+@-webkit-keyframes slideup {
+    from{top: 500px}
+    to{top: 10px}
+}
+@keyframes slideup {
+    from{top: 500px}
+    to{top: 10px}
+}
+

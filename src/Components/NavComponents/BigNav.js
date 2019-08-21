@@ -1,9 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const Navbar = props => {
+const BigNav = (
+  { home, 
+    about, 
+    contact, 
+    signup, 
+    login, 
+    showLoginFormModal, 
+    showSignupFormModal }) => {
   return (
-    <React.Fragment>
+    <div className="nav">
       <div className="nav_logo">
         <span className="nav_title">B</span>
         <span className="nav_title">A</span>
@@ -16,25 +24,33 @@ const Navbar = props => {
         <ul className="home_nav_header">
           <li className="home_nav_list">
             <Link to="/" id="nav_link">
-              {props.home}
+              {home}
             </Link>
           </li>
           <li className="home_nav_list">
             <Link to="#about" id="nav_link">
-              {props.about}
+              {about}
             </Link>
           </li>
           <li className="home_nav_list">
             <Link to="#contact" id="nav_link">
-              {props.contact}
+              {contact}
             </Link>
           </li>
-          <li className="home_nav_list">{props.signup}</li>
-          <li className="home_nav_list">{props.login}</li>
+          <li className="home_nav_list" onClick={showSignupFormModal}>
+            {signup}
+          </li>
+          <li className="home_nav_list" onClick={showLoginFormModal}>
+            {login}
+          </li>
         </ul>
       </nav>
-    </React.Fragment>
+    </div>
   );
 };
 
-export default Navbar;
+const mapDispatchToProps = dispatch => ({
+  showSignupFormModal: () => dispatch({ type: 'SIGNUP_MODAL'}),
+  showLoginFormModal: () => dispatch({ type: 'LOGIN_MODAL'})
+})
+export default connect(null, mapDispatchToProps)(BigNav);

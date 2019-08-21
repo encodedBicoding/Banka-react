@@ -1,0 +1,97 @@
+/* Navigation Styles */
+.home_nav {
+    text-align: center;
+    margin: 30px;
+    border-bottom: 0.2px solid rgba(0,0,0, 0.8);
+}
+.main-container{
+    margin:0;
+    background-color: #fff;
+    padding: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+    transition: width 90s; 
+}
+.home_nav_header {
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.1)
+}
+.home_nav_list:hover,
+.sm_nav_list li:hover,
+.sm_nav_list #sm_nav_link:hover,
+#nav_link:hover {
+    cursor: pointer;
+    color: #FF8C00;
+}
+
+#nav_link {
+    text-decoration: none;
+}
+.home_nav_list{
+    list-style-type: none;
+    display: inline;
+    padding: 4px;
+    margin: 30px;
+    cursor: pointer;
+}
+.nav_logo {
+    text-align: center;
+    padding: 30px;
+}
+.nav_last_child,
+.sm_nav_last_child {
+    color: #FF8C00;
+    font-weight: 300 !important;
+    animation: slideleft .3s;
+    position: relative;
+}
+.nav_slogan {
+    font-size: 10px;
+    padding: none;
+    position: absolute;
+    left: 47.3%;
+    top: 85px;
+}
+.nav_title,
+.sm_nav_title {
+    padding: 11px;
+    font-size: 3.5em;
+    font-weight: 500
+}
+.sm_nav_list{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+}
+.sm_nav_list_item {
+    cursor: pointer;
+}
+.sm_nav_list li{
+    display: inline;
+    padding: 20px;
+}
+#sm_nav_link{
+    text-decoration: none;
+}
+.smallnav{
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    box-shadow:0 0 10px 0 rgba(0,0,0,.3);
+}
+/* Key frames */
+@-webkit-keyframes slideleft {
+    from{left: 1000px}
+    to{left: 10px}
+}
+@keyframes slideleft {
+    from{left: 1000px}
+    to{left: 10px}
+}

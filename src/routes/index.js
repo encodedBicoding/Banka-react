@@ -1,4 +1,4 @@
-import Homepage from "../components/Homepage";
+import Homepage from '../Components/Presentational/HomepageComponent/Homepage';
 const routes = {
   Homepage
 };

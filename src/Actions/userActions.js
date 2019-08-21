@@ -1,0 +1,6 @@
+export const SIGN_UP_USER = 'SIGNUP_USER';
+export const LOGIN_USER = 'SIGNIN_USER';
+export const SIGNUP_LOADING = 'SIGNUP_LOADING';
+export const LOGIN_LOADING = 'LOGIN_LOADING';
+export const PROMISE_RETURNED = 'PROMISE_RETURNED';
+
