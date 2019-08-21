@@ -8,8 +8,7 @@
     "test": "jest --coverage",
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --port 3000 --open  && webpack --watch",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "prestart": "eslint ./src --fix"
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
