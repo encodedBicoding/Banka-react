@@ -1,0 +1,207 @@
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import Navbar from '../../NavComponents/Navbar';
+import FormModal from '../../ModalComponents/FormModal';
+
+const Homepage = props => {
+  console.log(props.history)
+  return (
+    <div>
+      <Navbar
+        home="Home"
+        about="About"
+        contact="Contact"
+        signup="Sign Up"
+        login="Log In"
+      />
+      {props.modal === 'SIGNUP' ? (
+        <FormModal title="Sign up" type="signup" />
+      ) : props.modal === 'LOGIN' ? (
+        <FormModal title="Log in" type="login" />
+      ) : (
+        false
+      )}
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+      <p>uijsiidikisids</p>
+    </div>
+  );
+};
+const mapStateToProps = state => ({
+  modal: state.modalReducer.modal
+});
+export default connect(mapStateToProps)(Homepage);

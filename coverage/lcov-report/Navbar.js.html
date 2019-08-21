@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>4/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>1/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>4/6</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -82,15 +82,19 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -114,54 +118,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
-import { Link } from "react-router-dom";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useEffect, useState } from 'react';
+import BigNav from './BigNav.js';
+import SmallNav from './SmallNav.js';
+import './NavStyle.css';
 &nbsp;
 const Navbar = props =&gt; {
+  let [scrollPosition, setScrollPosition] = useState(0);
+  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    window.onscroll = <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      setScrollPosition(document.documentElement.scrollTop);</span>
+    };
+  }, [scrollPosition]);
   return (
-    &lt;React.Fragment&gt;
-      &lt;div className="nav_logo"&gt;
-        &lt;span className="nav_title"&gt;B&lt;/span&gt;
-        &lt;span className="nav_title"&gt;A&lt;/span&gt;
-        &lt;span className="nav_title"&gt;N&lt;/span&gt;
-        &lt;span className="nav_title"&gt;K&lt;/span&gt;
-        &lt;span className="nav_title nav_last_child"&gt;A&lt;/span&gt;
-        &lt;p className="nav_slogan"&gt;...first online mobile banking service&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;nav className="home_nav"&gt;
-        &lt;ul className="home_nav_header"&gt;
-          &lt;li className="home_nav_list"&gt;
-            &lt;Link to="/" id="nav_link"&gt;
-              {props.home}
-            &lt;/Link&gt;
-          &lt;/li&gt;
-          &lt;li className="home_nav_list"&gt;
-            &lt;Link to="#about" id="nav_link"&gt;
-              {props.about}
-            &lt;/Link&gt;
-          &lt;/li&gt;
-          &lt;li className="home_nav_list"&gt;
-            &lt;Link to="#contact" id="nav_link"&gt;
-              {props.contact}
-            &lt;/Link&gt;
-          &lt;/li&gt;
-          &lt;li className="home_nav_list"&gt;{props.signup}&lt;/li&gt;
-          &lt;li className="home_nav_list"&gt;{props.login}&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/nav&gt;
-    &lt;/React.Fragment&gt;
+    &lt;div className="main-container"&gt;
+      {scrollPosition &gt; 20 ? (
+<span class="branch-0 cbranch-no" title="branch not covered" >        &lt;SmallNav</span>
+          home={props.home}
+          about={props.about}
+          contact={props.contact}
+          signup={props.signup}
+          login={props.login}
+        /&gt;
+      ) : (
+        &lt;BigNav
+          home={props.home}
+          about={props.about}
+          contact={props.contact}
+          signup={props.signup}
+          login={props.login}
+        /&gt;
+      )}
+    &lt;/div&gt;
   );
 };
 &nbsp;
@@ -172,7 +160,7 @@ export default Navbar;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Aug 15 2019 19:45:15 GMT+0100 (West Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Aug 21 2019 18:48:38 GMT+0100 (West Africa Standard Time)
 </div>
 </div>
 <script src="prettify.js"></script>
