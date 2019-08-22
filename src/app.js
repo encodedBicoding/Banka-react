@@ -4,11 +4,12 @@ import { Route } from 'react-router-dom';
 import store from './store';
 import routes from './Routes';
 
-const { Homepage } = routes;
+const { Homepage, Dashboard } = routes;
 
 const App = () => (
   <Provider store={store}>
-    <Route path="/" component={Homepage} />
+    <Route exact path="/" component={Homepage} />
+    <Route path="/profile" component={Dashboard}></Route>
   </Provider>
 );
 
