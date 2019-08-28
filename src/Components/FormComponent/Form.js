@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Input from '../InputComponent/Input';
 import handleFormSubmit from './handleFormSubmit';
@@ -12,8 +12,26 @@ const Form = (
     type, 
     inputs, 
     title,
-    isFetching 
+    isFetching,
+    path,
+    isLoggedin,
+    history 
   }) => {
+  useEffect(()=> {
+    if(isLoggedin){
+      if(!path) {
+        setTimeout(() => {
+          history.push('/profile')
+        }, 1500)
+      }else{
+        if(path) {
+          setTimeout(() => {
+            history.push(path);
+          }, 1500)
+        }
+      }
+    }
+  });
   const [formError, setFormError] = useState({
     isError: false,
     type: '',
@@ -150,7 +168,9 @@ const Form = (
 };
 
 const mapStateToProps = (state) => ({
-  isFetching: state.apiCallReducer.isFetching
+  isFetching: state.apiCallReducer.isFetching,
+  path: state.modalReducer.path,
+  isLoggedin: state.authReducer.isLoggedIn
 });
 
 const mapDispatchToProps = dispatch => ({

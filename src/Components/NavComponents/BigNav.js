@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const BigNav = (
@@ -28,14 +28,10 @@ const BigNav = (
             </Link>
           </li>
           <li className="home_nav_list">
-            <Link to="#about" id="nav_link">
-              {about}
-            </Link>
+            <a href="#about" id="nav_link">{about}</a>
           </li>
           <li className="home_nav_list">
-            <Link to="#contact" id="nav_link">
-              {contact}
-            </Link>
+            <a href="#contact" id="nav_link"> {contact}</a>
           </li>
           <li className="home_nav_list" onClick={showSignupFormModal}>
             {signup}

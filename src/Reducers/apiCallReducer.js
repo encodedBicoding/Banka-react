@@ -1,7 +1,15 @@
-import { SIGNUP_LOADING, LOGIN_LOADING, PROMISE_RETURNED } from '../Actions/userActions';
+import { 
+  SIGNUP_LOADING, 
+  LOGIN_LOADING, 
+  PROMISE_RETURNED, 
+  BANK_ACCOUNT_CREATE_LOADING,
+  BANK_ACCOUNT_CREATE_RESPONSE 
+} from '../Actions/userActions';
 
 const initialState = {
-  isFetching: false
+  isFetching: false,
+  isCreatingBankAccount: false,
+  response: {}
 }
 
 const apiCallReducer = (state = initialState, action) => {
@@ -19,7 +27,19 @@ const apiCallReducer = (state = initialState, action) => {
   case PROMISE_RETURNED:
     return {
       ...state,
-      isFetching: false
+      isFetching: false,
+      isCreatingBankAccount: false
+    }
+  case BANK_ACCOUNT_CREATE_LOADING:
+    return {
+      ...state,
+      isCreatingBankAccount: true
+    }
+  case BANK_ACCOUNT_CREATE_RESPONSE:
+    return {
+      ...state,
+      isCreatingBankAccount: false,
+      response: action.data
     }
   default:
     return state
