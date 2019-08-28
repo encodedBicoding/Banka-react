@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Navbar from '../../NavComponents/Navbar';
 import FormModal from '../../ModalComponents/FormModal';
+import HomeBody from '../HomeBodyComponent/HomeBody';
 
 const Homepage = props => {
-  console.log(props.history)
   return (
     <div>
       <Navbar
@@ -15,189 +15,13 @@ const Homepage = props => {
         login="Log In"
       />
       {props.modal === 'SIGNUP' ? (
-        <FormModal title="Sign up" type="signup" />
+        <FormModal title="Sign up" type="signup" history={props.history}/>
       ) : props.modal === 'LOGIN' ? (
-        <FormModal title="Log in" type="login" />
+        <FormModal title="Log in" type="login" history={props.history}/>
       ) : (
         false
       )}
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
-      <p>uijsiidikisids</p>
+      <HomeBody />
     </div>
   );
 };

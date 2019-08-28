@@ -12,7 +12,7 @@ const Navbar = props => {
   }, [scrollPosition]);
   return (
     <div className="main-container">
-      {scrollPosition > 20 ? (
+      {scrollPosition >= 4 ? (
         <SmallNav
           home={props.home}
           about={props.about}

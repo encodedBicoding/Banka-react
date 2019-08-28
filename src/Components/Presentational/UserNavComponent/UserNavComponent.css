@@ -1,0 +1,46 @@
+.profile-nav-container{
+    margin-top: 5px;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+}
+.welcome-note{
+    color: #FF8C00;
+    font-size: 16px;
+}
+.profile-logo{
+    position: absolute;
+    top: 25px;
+    left: 4%
+}
+.pl-logo{
+    margin-left: 20px;
+    font-size: 16px;
+}
+.pl-logo-last{
+    color:#FF8C00
+}
+.profile-nav {
+    margin: 5px;
+    position: static;
+}
+.profile-list-container{
+    list-style-type: none;
+}
+.profile-list-container li{
+    display: inline;
+}
+.profile-image img{
+    width: 4%;
+}
+.profile-welcome{
+  position: absolute;
+  left: 87%;
+  top: 25px;
+  width: auto;
+}
+.profile-image img:hover{
+    cursor: pointer;
+}
+.sidenav{
+    position: absolute;
+}

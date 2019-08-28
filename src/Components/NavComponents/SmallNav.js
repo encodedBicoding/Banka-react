@@ -26,14 +26,10 @@ const SmallNav = ({
             </Link>
           </li>
           <li className="sm_nav_list_item">
-            <Link to="#about" id="sm_nav_link">
-              {about}
-            </Link>
+            <a href="#about" id="nav_link">{about}</a>
           </li>
           <li className="sm_nav_list_item">
-            <Link to="#contact" id="sm_nav_link">
-              {contact}
-            </Link>
+            <a href="#contact" id="nav_link">{contact}</a>
           </li>
           <li className="sm_nav_list_item" onClick={showSignupFormModal}>
             {signup}

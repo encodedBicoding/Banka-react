@@ -12,7 +12,7 @@ const responseReducer = (state = initialState, action) => {
   case GLOBAL_RESPONSE:
     setTimeout(()=>{
       store.dispatch({ type: CLOSE_GLOBAL_RESPONSE})
-    }, 2000)
+    }, 1500)
     return {
       ...state,
       isGlobalResponse: true,

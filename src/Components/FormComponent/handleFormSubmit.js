@@ -10,7 +10,7 @@ const handleFormSubmit = (e) => {
   Array.from(e.target.children).forEach(child => {
     if (
       child.className === 'form-input' &&
-        child.children[0].name !== 'confirm password'
+      child.children[0].name !== 'confirm password'
     ) {
       arr.push({
         name: child.children[0].name,
@@ -22,49 +22,55 @@ const handleFormSubmit = (e) => {
     prev[curr['name']] = curr['value'];
     return prev;
   }, {});
+  console.log(user)
   return submitData(arr.length, user);
 };
 
 const submitData = (arrLengthValue, payload) => {
   // Sign up
-  if(arrLengthValue > 2) {
-    store.dispatch({type: 'SIGNUP_LOADING'})
+  if (arrLengthValue > 2) {
+    store.dispatch({ type: 'SIGNUP_LOADING' })
     fetch(`${baseUrl}/auth/signup`, {
       method: 'POST',
       headers: {
-        'content-type':'application/json'
+        'content-type': 'application/json'
       },
       body: JSON.stringify(payload)
     }).then(resp => resp.json())
       .then(res => {
-        store.dispatch({ type: 'PROMISE_RETURNED'});
-        if(res.status !== 201) {
-          store.dispatch({type: 'GLOBAL_RESPONSE', message: res.message, status: res.status})
+        console.log(res)
+        store.dispatch({ type: 'PROMISE_RETURNED' });
+        if (res.status !== 201) {
+          store.dispatch({ type: 'GLOBAL_RESPONSE', message: res.message, status: res.status })
         }
-        store.dispatch({ type: 'GLOBAL_RESPONSE', message: res.message, status: res.status})
-        window.sessionStorage.__banka__token = res.data.token;
-        window.sessionStorage.__banka__user__name = res.data.userObj.firstname;
+        store.dispatch({ type: 'GLOBAL_RESPONSE', message: res.message, status: res.status })
+        window.localStorage.setItem('__banka__token', res.data.token);
+        window.localStorage.setItem('__banka__user__name', `${res.data.firstname}`);
+        store.dispatch({ type: 'START_SESSION' });
       })
   }
+  // login
   if (arrLengthValue === 2) {
-    store.dispatch({ type: 'LOGIN_LOADING'});
+    store.dispatch({ type: 'LOGIN_LOADING' });
     fetch(`${baseUrl}/auth/login`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
       },
       body: JSON.stringify(payload)
-    }).then( resp => resp.json())
+    }).then(resp => resp.json())
       .then(res => {
-        store.dispatch({ type: 'PROMISE_RETURNED'});
-        if(res.status !== 200) {
-          store.dispatch({ type: 'GLOBAL_RESPONSE', message: res.message, status: res.status})
+        store.dispatch({ type: 'PROMISE_RETURNED' });
+        if (res.status !== 200) {
+          store.dispatch({ type: 'GLOBAL_RESPONSE', message: res.message, status: res.status })
         }
-        store.dispatch({ type: 'GLOBAL_RESPONSE', message: res.message, status: res.status})
-        window.sessionStorage.__banka__token = res.data.token;
-        window.sessionStorage.__banka__user__name = res.data.userObj.firstname;
+        store.dispatch({ type: 'GLOBAL_RESPONSE', message: res.message, status: res.status })
+        window.localStorage.setItem('__banka__token', `${res.data.token}`);
+        window.localStorage.setItem('__banka__user__name', `${res.data.userObj.firstname}`);
+        store.dispatch({ type: 'START_SESSION' });
       })
   }
 
 }
 export default handleFormSubmit;
+
