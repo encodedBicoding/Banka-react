@@ -21,7 +21,7 @@ const Form = (
     if(isLoggedin){
       if(!path) {
         setTimeout(() => {
-          history.push('/profile')
+          history.push('/create')
         }, 1500)
       }else{
         if(path) {

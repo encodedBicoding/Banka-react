@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const BigNav = (
+export const BigNav = (
   { home, 
     about, 
     contact, 
@@ -33,7 +33,7 @@ const BigNav = (
           <li className="home_nav_list">
             <a href="#contact" id="nav_link"> {contact}</a>
           </li>
-          <li className="home_nav_list" onClick={showSignupFormModal}>
+          <li className="home_nav_list" datatest="signupmodal" onClick={showSignupFormModal}>
             {signup}
           </li>
           <li className="home_nav_list" onClick={showLoginFormModal}>

@@ -9,15 +9,18 @@ const SideNav = ({history, dispatch}) => {
   const navItem = [
     {
       icon: faPlusCircle,
-      value: 'New Account'
+      value: 'New Account',
+      path: '/create'
     },
     {
       icon: faBullseye,
-      value: 'View Accounts'
+      value: 'View Accounts',
+      path: '/accounts'
     },
     {
       icon:faCogs,
       value: 'Settings',
+      path: '/settings'
     },
     {
       icon: faSignOutAlt,
@@ -37,23 +40,25 @@ const SideNav = ({history, dispatch}) => {
     return `sd-nav-${id}`
   }
   const generateLink = (item) => {
-    const { value } = item;
+    const { value, path } = item;
     if(value === 'Logout'){
       window.localStorage.clear();
       dispatch({ type: 'END_SESSION'});
       dispatch({ type: 'CLOSE_MODAL'})
       history.push('/');
-    }
-    if(value === 'Settings') {
-      history.push('/settings')
-    }
-    if(value === 'View Accounts'){
-      history.push('/accounts')
-    }
-    if(value === 'New Account') {
-      history.push('/create');
+    } else {
+      history.push(path)
     }
   }
+  const generateClassForUrlLocation = (item) => {
+    const {path } = item;
+    const urlPath =window.location.pathname;
+    if(urlPath === path) {
+      return 'sd-nav-list-item active-path'
+    } else {
+      return 'sd-nav-list-item'
+    }
+  } 
 
   return (
     <div className="side-nav-container">
@@ -62,10 +67,11 @@ const SideNav = ({history, dispatch}) => {
           {
             navItem.map((item, idx) => (
               <div key={idx} className="nav-list-wrap">
-                <li className='sd-nav-list-item' 
+                <li className={generateClassForUrlLocation(item)} 
                   onMouseEnter={handleShowSpanChild} 
                   onMouseLeave={handleHideSpanChild}
                   onClick={()=>generateLink(item)}
+                  onMouseOver={() => generateClassForUrlLocation(item)}
                 >
                   <FontAwesomeIcon icon={item.icon} />{' '}
                 </li>
