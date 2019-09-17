@@ -3,7 +3,7 @@
     margin: 0;
 }
 .user-pf-content-body{
-    margin: 6% 26%;
+    margin: 2% 26%;
     width: 50%;
 }
 .user-pf-content{
@@ -58,4 +58,18 @@
 .acc-terms ins{
     color: #FF8C00;
     cursor: pointer;
+}
+.account-holder div > label {
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 2px;
+    color: red;
+}
+.account-holder div {
+    margin: 3px 0 3px 0;
+}
+.stat-wrapper{
+    position: relative;
+    margin-left: 80%;
+    display: inline;
 }

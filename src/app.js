@@ -8,7 +8,8 @@ const {
   Homepage, 
   Dashboard, 
   NotFound, 
-  CreateAccount 
+  CreateAccount ,
+  ViewAccount
 } = routes;
 
 
@@ -18,6 +19,7 @@ const App = ({store}) => (
       <Route exact path="/" component={ Homepage } />
       <ProtectedRoute path='/profile' component={Dashboard}/>
       <ProtectedRoute path='/create' component={CreateAccount}/>
+      <ProtectedRoute path='/accounts' component={ViewAccount}/>
       <Route component={NotFound}></Route>
     </Switch>
   </Provider>

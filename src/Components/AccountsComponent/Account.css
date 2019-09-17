@@ -1,0 +1,17 @@
+.a-stat{
+    font-size: 2.4em;
+}
+.account-active{
+    color: green
+}
+.account-not-active{
+    color: red;
+}
+.stat-text{
+    font-size: .8em;
+}
+.account-container {
+    box-shadow:0 0 10px 0 rgba(0,0,0,.1);
+    border: none;
+    font-size: .8em;
+}

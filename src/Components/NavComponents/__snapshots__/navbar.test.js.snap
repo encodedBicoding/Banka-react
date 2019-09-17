@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Handle Navbar Component test Should render correctly 1`] = `
+<div
+  className="main-container"
+>
+  <Connect(BigNav) />
+</div>
+`;
+
+exports[`test bignav mount should mount properly 1`] = `
+<div
+  className="nav"
+>
+  <div
+    className="nav_logo"
+  >
+    <span
+      className="nav_title"
+    >
+      B
+    </span>
+    <span
+      className="nav_title"
+    >
+      A
+    </span>
+    <span
+      className="nav_title"
+    >
+      N
+    </span>
+    <span
+      className="nav_title"
+    >
+      K
+    </span>
+    <span
+      className="nav_title nav_last_child"
+    >
+      A
+    </span>
+    <p
+      className="nav_slogan"
+    >
+      ...first online mobile banking service
+    </p>
+  </div>
+  <nav
+    className="home_nav"
+  >
+    <ul
+      className="home_nav_header"
+    >
+      <li
+        className="home_nav_list"
+      >
+        <Link
+          id="nav_link"
+          to="/"
+        />
+      </li>
+      <li
+        className="home_nav_list"
+      >
+        <a
+          href="#about"
+          id="nav_link"
+        />
+      </li>
+      <li
+        className="home_nav_list"
+      >
+        <a
+          href="#contact"
+          id="nav_link"
+        >
+           
+        </a>
+      </li>
+      <li
+        className="home_nav_list"
+        datatest="signupmodal"
+        onClick={[MockFunction]}
+      />
+      <li
+        className="home_nav_list"
+        onClick={[MockFunction]}
+      />
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`test bignav mount should test useEffect function 1`] = `0`;

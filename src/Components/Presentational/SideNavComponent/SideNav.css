@@ -20,6 +20,9 @@
     transition: all .9s;
     z-index: 1;
 }
+.active-path{
+    background-color:rgb(248, 193, 125); 
+}
 
 .sd-nav-list-item:hover{
     background-color:  #FF8C00;
